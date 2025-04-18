@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "nodemon --exec bun server.js",
-    "format": "prettier --write \"**/*.{js,json,md}\""
+    "format": "prettier --write \"**/*.{js,json,md}\"",
+    "start": "node server.js"
   },
   "devDependencies": {
     "@types/bun": "latest",

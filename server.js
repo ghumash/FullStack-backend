@@ -49,8 +49,8 @@ app.use(errorHandler)
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
-    console.log('✅ MongoDB connected')
+    console.log('🌐 MongoDB connected')
     const PORT = process.env.PORT || 4000
-    app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`))
+    app.listen(PORT, () => console.log(`🚀 Server is running on port ${PORT}`))
   })
   .catch((err) => console.error('MongoDB error:', err))

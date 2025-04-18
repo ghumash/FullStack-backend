@@ -1,3 +1,5 @@
+import { isProd } from '../shared/const.js'
+
 const errorHandler = (err, req, res, next) => {
   console.error('💥 Error:', err)
 
@@ -13,7 +15,7 @@ const errorHandler = (err, req, res, next) => {
   res.status(statusCode).json({
     message: err.message || 'Server Error',
     code: err.code || null,
-    stack: process.env.APP_VERSION === 'production' ? '🥞' : err.stack,
+    stack: isProd ? '🥞' : err.stack,
   })
 }
 
