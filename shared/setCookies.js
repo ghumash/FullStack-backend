@@ -3,7 +3,8 @@ import { isProd } from './const.js'
 const baseOptions = {
   httpOnly: true,
   secure: isProd,
-  sameSite: isProd ? 'Strict' : 'Lax',
+  sameSite: isProd ? 'None' : 'Lax',
+  path: '/'
 }
 
 const cookieOptions = {
